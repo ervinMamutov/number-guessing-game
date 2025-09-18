@@ -7,7 +7,7 @@ public class AskUser
     public int getNumber()
    {
         int number = 0;
-        System.out.println("Input your answer");
+        System.out.print("Input your answer: -> ");
         if (scanner.hasNextInt())
         {
            number = scanner.nextInt();
@@ -16,7 +16,11 @@ public class AskUser
         {
             System.out.println("Input number between 1 to 100");
         }
-
         return number;
+   }
+
+   public void closeScaner()
+   {
+       scanner.close();;
    }
 }
